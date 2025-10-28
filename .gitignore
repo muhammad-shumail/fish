@@ -68,3 +68,5 @@ local_*.fish
 secrets.fish
 .env
 .env.*
+
+fish_variables

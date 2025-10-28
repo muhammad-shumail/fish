@@ -114,6 +114,8 @@ alias update='sudo apt update && sudo apt upgrade -y'
 alias install='sudo apt install'
 alias remove='sudo apt remove'
 alias search='apt search'
+alias cleanup='sudo apt autoremove && sudo apt autoclean'
+alias y='yazi'
 
 # --- WezTerm Specific ---
 alias wt='wezterm'
@@ -255,14 +257,14 @@ set -g fish_color_error red
 set -g fish_color_param cyan
 
 # --- Interactive Shell Only ---
-if status --is-interactive
-    # Show system info on startup (optional - uncomment if desired)
-    # neofetch
-    # pfetch
+# if status --is-interactive
+#     # Show system info on startup (optional - uncomment if desired)
+#     # neofetch
+#     # pfetch
 
-    # Print a nice greeting
-    echo "🐟 Fish Shell Ready | $(date +%H:%M)"
-end
+#     # Print a nice greeting
+#     echo "🐟 Fish Shell Ready | $(date +%H:%M)"
+# end
 
 # --- Local Overrides ---
 # Source local config if it exists (for machine-specific settings)
