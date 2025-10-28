@@ -14,9 +14,9 @@ if functions -q z
     end
 end
 
-if type -q starship
-    starship init fish | source
-end
+# if type -q starship
+#     starship init fish | source
+# end
 set -gx STARSHIP_CONFIG $HOME/.config/starship.toml
 
 # ---- Pro enhancements (safe, reversible) ----
