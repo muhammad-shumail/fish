@@ -19,14 +19,39 @@ fish_add_path /usr/local/bin
 # end
 
 # --- FZF Integration ---
+# --- Enhanced Ctrl+R (History Search with FZF) ---
 if type -q fzf
-    set -gx FZF_DEFAULT_OPTS '--height 40% --reverse --border'
-    set -gx FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
-    set -gx FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
+    function fish_user_key_bindings
+        # Preserve existing bindings if defined
+        if functions -q fish_default_key_bindings
+            fish_default_key_bindings
+        end
 
-    # Load FZF keybindings if available
-    test -f $HOME/.fzf/shell/key-bindings.fish; and source $HOME/.fzf/shell/key-bindings.fish
+        # Ctrl+R -> fuzzy history search
+        bind \cr 'fzf_history_search'
+
+        # Optional: Ctrl+T -> fuzzy file picker
+        bind \ct 'fzf_file_search'
+    end
+
+    # Define helper functions
+    function fzf_history_search
+        set -l selected (history | fzf --height 40% --reverse --border --tiebreak=index --ansi --preview "echo {}")
+        if test -n "$selected"
+            commandline -r "$selected"
+        end
+        commandline -f repaint
+    end
+
+    function fzf_file_search
+        set -l selected (fd --type f --hidden --exclude .git | fzf --height 40% --reverse --border)
+        if test -n "$selected"
+            commandline -i "$selected"
+        end
+        commandline -f repaint
+    end
 end
+
 
 # --- Navigation Aliases ---
 alias ..='cd ..'
