@@ -141,6 +141,8 @@ alias remove='sudo apt remove'
 alias search='apt search'
 alias cleanup='sudo apt autoremove && sudo apt autoclean'
 alias y='yazi'
+alias audit_system='sudo lynis audit system'
+
 
 # --- WezTerm Specific ---
 alias wt='wezterm'
@@ -154,8 +156,9 @@ alias wtconfig='$EDITOR ~/.config/wezterm/wezterm.lua'
 # --- Directory Shortcuts ---
 abbr -a dl 'cd ~/Downloads'
 abbr -a doc 'cd ~/Documents'
-abbr -a dev 'cd ~/Development'
-abbr -a proj 'cd ~/Projects'
+abbr -a media 'cd /media/shuraim/media'
+abbr -a proj 'cd /media/shuraim/projects'
+abbr -a linux 'cd /media/shuraim/projects/Linux'
 
 # --- Command Abbreviations (auto-expand) ---
 abbr -a gti 'git'
