@@ -1,0 +1,1 @@
+../../../dotfiles/.config/fish/functions/_autopair_backspace.fish

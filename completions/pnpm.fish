@@ -1,0 +1,1 @@
+../../../dotfiles/.config/fish/completions/pnpm.fish

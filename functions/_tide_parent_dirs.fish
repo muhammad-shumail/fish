@@ -1,0 +1,1 @@
+../../../dotfiles/.config/fish/functions/_tide_parent_dirs.fish

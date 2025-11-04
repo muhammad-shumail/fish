@@ -1,0 +1,1 @@
+../../../dotfiles/.config/fish/completions/docker-compose.fish

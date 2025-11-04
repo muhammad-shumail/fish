@@ -1,0 +1,1 @@
+../../../dotfiles/.config/fish/functions/_fzf_search_history.fish

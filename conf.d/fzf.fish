@@ -1,0 +1,1 @@
+../../../dotfiles/.config/fish/conf.d/fzf.fish

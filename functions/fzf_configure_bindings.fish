@@ -1,0 +1,1 @@
+../../../dotfiles/.config/fish/functions/fzf_configure_bindings.fish

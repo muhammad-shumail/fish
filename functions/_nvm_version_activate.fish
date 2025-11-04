@@ -1,0 +1,1 @@
+../../../dotfiles/.config/fish/functions/_nvm_version_activate.fish

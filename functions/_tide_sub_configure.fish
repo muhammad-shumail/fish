@@ -1,0 +1,1 @@
+../../../dotfiles/.config/fish/functions/_tide_sub_configure.fish

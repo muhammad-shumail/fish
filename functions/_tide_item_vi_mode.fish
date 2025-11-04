@@ -1,0 +1,1 @@
+../../../dotfiles/.config/fish/functions/_tide_item_vi_mode.fish

@@ -1,0 +1,1 @@
+../../../dotfiles/.config/fish/completions/kubectl.fish
